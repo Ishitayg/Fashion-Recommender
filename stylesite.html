@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Recommendation App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-heading">Style Recommendation App</h1>
+        
+        <div id="language-selection">
+            <label for="language">Select your language:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+
+        <!--<section id="know-your-body-type">
+            <h2 data-translate="knowYourBodyType">Know Your Body Type</h2>
+            <form>
+                <label for="gender" data-translate="gender">Gender:</label>
+                <select id="gender" onchange="changeGender()">
+                    <option value="women" data-translate="women">Women</option>
+                    <option value="men" data-translate="men">Men</option>
+                </select>
+                
+                <label for="height" id="height-label" data-translate="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required>
+
+                <label for="weight" id="weight-label" data-translate="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+
+                <div id="womenBodyTypeFields">
+                    <label for="bust" data-translate="womenBust">Bust (inches):</label>
+                    <input type="number" id="bust" name="bust">
+                    
+                    <label for="waist" data-translate="womenWaist">Waist (inches):</label>
+                    <input type="number" id="waist" name="waist">
+                    
+                    <label for="hip" data-translate="womenHip">Hip (inches):</label>
+                    <input type="number" id="hip" name="hip">
+                </div>
+
+                <div id="menBodyTypeFields">
+                    <label for="chest" data-translate="menChest">Chest (inches):</label>
+                    <input type="number" id="chest" name="chest">
+                </div>
+
+                <button type="button" onclick="knowYourBodyType()" data-translate="knowYourBodyTypeButton">Know Your Body Type</button>
+                <div id="bodyTypeResult"></div>
+            </form>
+        </section>-->
+        <!--<section id="know-your-body-type">
+            <h2 data-translate="knowYourBodyType">Know Your Body Type</h2>
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="gender" data-translate="gender">Gender:</label></td>
+                        <td>
+                            <select id="gender" onchange="changeGender()">
+                                <option value="women" data-translate="women">Women</option>
+                                <option value="men" data-translate="men">Men</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="height" id="height-label" data-translate="height">Height (cm):</label></td>
+                        <td><input type="number" id="height" name="height" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="weight" id="weight-label" data-translate="weight">Weight (kg):</label></td>
+                        <td><input type="number" id="weight" name="weight" required></td>
+                    </tr>
+                </table>
+        
+                <div id="womenBodyTypeFields">
+                    <table>
+                        <tr>
+                            <td><label for="bust" data-translate="womenBust">Bust (inches):</label></td>
+                            <td><input type="number" id="bust" name="bust"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="waist" data-translate="womenWaist">Waist (inches):</label></td>
+                            <td><input type="number" id="waist" name="waist"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="hip" data-translate="womenHip">Hip (inches):</label></td>
+                            <td><input type="number" id="hip" name="hip"></td>
+                        </tr>
+                    </table>
+                </div>
+        
+                <div id="menBodyTypeFields">
+                    <table>
+                        <tr>
+                            <td><label for="chest" data-translate="menChest">Chest (inches):</label></td>
+                            <td><input type="number" id="chest" name="chest"></td>
+                        </tr>
+                    </table>
+                </div>
+        
+                <button type="button" onclick="knowYourBodyType()" data-translate="knowYourBodyTypeButton">Know Your Body Type</button>
+            </form>
+            
+            Output Section
+            <div id="bodyTypeResult">
+                <h3 data-translate="yourBodyType">Your Body Type:</h3>
+                <table>
+                    <tr>
+                        <td><label data-translate="bodyTypeLabel">Body Type:</label></td>
+                        <td><span id="bodyType"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label data-translate="bmiLabel">BMI:</label></td>
+                        <td><span id="bmi"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>-->
+        <section id="know-your-body-type">
+            <h2 data-translate="knowYourBodyType">Know Your Body Type</h2>
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="gender" data-translate="gender">Gender:</label></td>
+                        <td>
+                            <select id="gender" onchange="changeGender()">
+                                <option value="women" data-translate="women">Women</option>
+                                <option value="men" data-translate="men">Men</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="height" id="height-label" data-translate="height">Height (cm):</label></td>
+                        <td><input type="number" id="height" name="height" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="weight" id="weight-label" data-translate="weight">Weight (kg):</label></td>
+                        <td><input type="number" id="weight" name="weight" required></td>
+                    </tr>
+                </table>
+        
+                <div id="womenBodyTypeFields">
+                    <table>
+                        <tr>
+                            <td><label for="bust" data-translate="womenBust">Bust (inches):</label></td>
+                            <td><input type="number" id="bust" name="bust"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="waist" data-translate="womenWaist">Waist (inches):</label></td>
+                            <td><input type="number" id="waist" name="waist"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="hip" data-translate="womenHip">Hip (inches):</label></td>
+                            <td><input type="number" id="hip" name="hip"></td>
+                        </tr>
+                    </table>
+                </div>
+        
+                <div id="menBodyTypeFields">
+                    <table>
+                        <tr>
+                            <td><label for="chest" data-translate="menChest">Chest (inches):</label></td>
+                            <td><input type="number" id="chest" name="chest"></td>
+                        </tr>
+                    </table>
+                </div>
+        
+                <button type="button" onclick="knowYourBodyType()" data-translate="knowYourBodyTypeButton">Know Your Body Type</button>
+            </form>
+            
+            <!-- Output Section -->
+            <div id="bodyTypeResult">
+                <h3 data-translate="yourBodyType">Your Body Type:</h3>
+                <table>
+                    <tr>
+                        <td><label data-translate="bodyTypeLabel">Gender:</label></td>
+                        <td><span id="resultGender"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label data-translate="heightLabel">Height:</label></td>
+                        <td><span id="resultHeight"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label data-translate="weightLabel">Weight:</label></td>
+                        <td><span id="resultWeight"></span></td>
+                    </tr>
+                    <tr id="bustRow">
+                        <td><label data-translate="bustLabel">Bust:</label></td>
+                        <td><span id="resultBust"></span></td>
+                    </tr>
+                    <tr id="waistRow">
+                        <td><label data-translate="waistLabel">Waist:</label></td>
+                        <td><span id="resultWaist"></span></td>
+                    </tr>
+                    <tr id="hipRow">
+                        <td><label data-translate="hipLabel">Hip:</label></td>
+                        <td><span id="resultHip"></span></td>
+                    </tr>
+                    <tr id="chestRow">
+                        <td><label data-translate="chestLabel">Chest:</label></td>
+                        <td><span id="resultChest"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label data-translate="bodyTypeLabel">Body Type:</label></td>
+                        <td><span id="bodyType"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label data-translate="bmiLabel">BMI:</label></td>
+                        <td><span id="bmi"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        
+
+        <section id="style-recommendations">
+            <h2 data-translate="styleRecommendations">Style Recommendations</h2>
+            
+            <label for="color-preference" data-translate="colorPreference">Preferred Color:</label>
+            <input type="text" id="color-preference" name="color-preference">
+            
+            <label for="style-preference" data-translate="stylePreference">Style Preference:</label>
+            <select id="style-preference">
+                <option value="">Select a style preference</option>
+                <option value="formal" data-translate="formal">Formal</option>
+                <option value="casual" data-translate="casual">Casual</option>
+                <option value="boho" data-translate="boho">Boho</option>
+                <option value="sporty" data-translate="sporty">Sporty</option>
+                <option value="wedding" data-translate="wedding">Wedding</option>
+                <option value="ethnic" data-translate="ethnic">Ethnic</option>
+                <option value="partywear" data-translate="partywear">Partywear</option>
+            </select>
+
+            <label for="item-preference" data-translate="itemPreference">Item Preference:</label>
+            <select id="item-preference">
+                <option value="">Select an item preference</option>
+                <option value="skirt" data-translate="skirt">Skirt</option>
+                <option value="dress" data-translate="dress">Dress</option>
+                <option value="top" data-translate="top">Top</option>
+                <option value="pants" data-translate="pants">Pants</option>
+                <option value="suit" data-translate="suit">Suit</option>
+                <option value="kurta" data-translate="kurta">Kurta</option>
+            </select>
+
+            <button id="recommendation-button" type="button" onclick="recommendStyles()" data-translate="getRecommendationsButton">Get Recommendations</button>
+            <div id="styleRecommendation"></div>
+        </section>
+
+        <section id="influencer-endorsements">
+            <h2 data-translate="influencerEndorsements">Top Myntra Influencers</h2>
+            <div class="endorsement">
+                <img src="C:/Users/jssea/OneDrive/Pictures/outfit 1.jpeg" alt="Influencer 1">
+                <p>Myntra Influencer 1</p>
+            </div>
+            <div class="endorsement">
+                <img src="C:/Users/jssea/OneDrive/Pictures/outfit 2.jpeg" alt="Influencer 2">
+                <p>Myntra Influencer 2</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
